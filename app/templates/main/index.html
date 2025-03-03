@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+{% block title %}Business Insights - Transform Your Data{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Transform Your Business Data Into Actionable Insights</h1>
+                <p class="lead mb-4">Our local agent technology securely analyzes your business data on-premises, providing powerful reports and visualizations without sending your sensitive information to the cloud.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="{{ url_for('auth.register') }}" class="btn btn-light btn-lg px-4 me-md-2">Get Started</a>
+                    <a href="{{ url_for('main.features') }}" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <img src="{{ url_for('static', filename='images/hero-image.svg') }}" alt="Data Analysis" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Why Choose Business Insights?</h2>
+            <p class="lead text-muted">Our platform offers unique advantages for your data analysis needs</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-lock fa-2x p-3"></i>
+                        </div>
+                        <h3 class="fs-4">Data Privacy First</h3>
+                        <p class="text-muted">Your data never leaves your premises. Our local agents work directly on your systems, ensuring maximum security and compliance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-chart-pie fa-2x p-3"></i>
+                        </div>
+                        <h3 class="fs-4">Advanced Analytics</h3>
+                        <p class="text-muted">Powerful analysis tools that transform complex data into clear, actionable business intelligence and visualizations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-cogs fa-2x p-3"></i>
+                        </div>
+                        <h3 class="fs-4">Easy Integration</h3>
+                        <p class="text-muted">Seamlessly connects with your existing databases, files, and business systems with minimal setup required.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">How It Works</h2>
+            <p class="lead text-muted">Simple steps to transform your business data</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="step-circle bg-primary text-white mb-3">1</div>
+                    <h4>Deploy Agent</h4>
+                    <p class="text-muted">Install our secure agent on your local system</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="step-circle bg-primary text-white mb-3">2</div>
+                    <h4>Connect Data</h4>
+                    <p class="text-muted">Link your business data sources to the agent</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="step-circle bg-primary text-white mb-3">3</div>
+                    <h4>Generate Reports</h4>
+                    <p class="text-muted">Create custom reports and analysis</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="step-circle bg-primary text-white mb-3">4</div>
+                    <h4>Take Action</h4>
+                    <p class="text-muted">Make data-driven business decisions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">What Our Customers Say</h2>
+            <p class="lead text-muted">Trusted by businesses of all sizes</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">"Business Insights transformed how we analyze our sales data. The local agent approach gave us the security we needed while providing powerful analytics."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="flex-shrink-0">
+                                <img src="https://via.placeholder.com/50" class="rounded-circle" alt="Customer">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Sarah Johnson</h5>
+                                <p class="text-muted mb-0">CFO, Retail Solutions Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">"As a healthcare provider, data privacy is critical. Business Insights' on-premises solution allowed us to gain insights while maintaining HIPAA compliance."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="flex-shrink-0">
+                                <img src="https://via.placeholder.com/50" class="rounded-circle" alt="Customer">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Dr. Michael Chen</h5>
+                                <p class="text-muted mb-0">CTO, HealthFirst Group</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">"The visualizations and reports generated by Business Insights have helped us identify cost-saving opportunities we never knew existed."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="flex-shrink-0">
+                                <img src="https://via.placeholder.com/50" class="rounded-circle" alt="Customer">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Robert Martinez</h5>
+                                <p class="text-muted mb-0">CEO, Global Manufacturing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9">
+                <h2 class="fw-bold mb-3">Ready to transform your business data?</h2>
+                <p class="lead mb-0">Start your free trial today and see the difference Business Insights can make.</p>
+            </div>
+            <div class="col-lg-3 text-lg-end mt-4 mt-lg-0">
+                <a href="{{ url_for('auth.register') }}" class="btn btn-light btn-lg">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block styles %}
+<style>
+    .feature-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .step-circle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 24px;
+        font-weight: bold;
+    }
+</style>
+{% endblock %} 

@@ -1,0 +1,150 @@
+/* Custom styles for Business Insights SaaS Platform */
+
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Navbar customization */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Card styling */
+.card {
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Button styling */
+.btn {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #4361ee;
+    border-color: #4361ee;
+}
+
+.btn-primary:hover {
+    background-color: #3a56d4;
+    border-color: #3a56d4;
+}
+
+/* Feature icons */
+.feature-icon {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Step circles */
+.step-circle {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard stats */
+.stat-card {
+    border-left: 4px solid #4361ee;
+    background-color: #f8f9fa;
+}
+
+.stat-icon {
+    color: #4361ee;
+    font-size: 2rem;
+}
+
+/* Agent status indicators */
+.status-badge {
+    padding: 0.35em 0.65em;
+    border-radius: 50rem;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-active {
+    background-color: #10b981;
+    color: white;
+}
+
+.status-inactive {
+    background-color: #6c757d;
+    color: white;
+}
+
+.status-error {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Report status indicators */
+.report-status-pending {
+    color: #f59e0b;
+}
+
+.report-status-processing {
+    color: #3b82f6;
+}
+
+.report-status-completed {
+    color: #10b981;
+}
+
+.report-status-error {
+    color: #ef4444;
+}
+
+/* Subscription plan cards */
+.plan-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.recommended {
+    border: 2px solid #4361ee;
+}
+
+.plan-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.plan-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4361ee;
+}
+
+.plan-features {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.plan-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-features i {
+    color: #10b981;
+    margin-right: 0.5rem;
+} 
