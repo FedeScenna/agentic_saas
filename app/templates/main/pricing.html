@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+
+{% block title %}Pricing - Business Insights{% endblock %}
+
+{% block content %}
+<!-- Pricing Header -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold">Simple, Transparent Pricing</h1>
+            <p class="lead">Choose the plan that's right for your business</p>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Plans -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-transparent border-0 text-center pt-4">
+                        <h3 class="fw-bold">Basic</h3>
+                        <div class="pricing-value">
+                            <span class="display-4 fw-bold">$49</span>
+                            <span class="text-muted">/month</span>
+                        </div>
+                        <p class="text-muted">Perfect for small businesses</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> 1 Local Agent</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> 3 Data Sources</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> 10 Reports</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Basic Visualizations</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Email Support</li>
+                            <li class="mb-3 text-muted"><i class="fas fa-times me-2"></i> Advanced Analytics</li>
+                            <li class="mb-3 text-muted"><i class="fas fa-times me-2"></i> Custom Dashboards</li>
+                            <li class="mb-3 text-muted"><i class="fas fa-times me-2"></i> API Access</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pb-4">
+                        <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary btn-lg w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Plan -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-transparent border-0 text-center pt-4">
+                        <span class="badge bg-primary mb-2">Most Popular</span>
+                        <h3 class="fw-bold">Professional</h3>
+                        <div class="pricing-value">
+                            <span class="display-4 fw-bold">$149</span>
+                            <span class="text-muted">/month</span>
+                        </div>
+                        <p class="text-muted">Ideal for growing companies</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> 3 Local Agents</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> 10 Data Sources</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Unlimited Reports</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Advanced Visualizations</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Priority Support</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Advanced Analytics</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Custom Dashboards</li>
+                            <li class="mb-3 text-muted"><i class="fas fa-times me-2"></i> API Access</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pb-4">
+                        <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-transparent border-0 text-center pt-4">
+                        <h3 class="fw-bold">Enterprise</h3>
+                        <div class="pricing-value">
+                            <span class="display-4 fw-bold">$399</span>
+                            <span class="text-muted">/month</span>
+                        </div>
+                        <p class="text-muted">For large organizations</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> 10 Local Agents</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Unlimited Data Sources</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Unlimited Reports</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Premium Visualizations</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> 24/7 Dedicated Support</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Advanced Analytics</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Custom Dashboards</li>
+                            <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> API Access</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pb-4">
+                        <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary btn-lg w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Frequently Asked Questions</h2>
+            <p class="lead text-muted">Answers to common questions about our pricing</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="pricingFAQ">
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Can I upgrade or downgrade my plan at any time?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Yes, you can upgrade or downgrade your subscription at any time. Changes to your plan will take effect at the start of your next billing cycle.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Is there a free trial available?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Yes, we offer a 14-day free trial on all plans. No credit card is required to start your trial, and you can cancel at any time.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Do you offer annual billing?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Yes, we offer annual billing with a 20% discount compared to monthly billing. Contact our sales team for more information.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                What payment methods do you accept?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers for annual subscriptions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom Plan CTA -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9">
+                <h2 class="fw-bold mb-3">Need a custom solution?</h2>
+                <p class="lead mb-0">Contact our sales team to discuss a plan tailored to your specific requirements.</p>
+            </div>
+            <div class="col-lg-3 text-lg-end mt-4 mt-lg-0">
+                <a href="{{ url_for('main.contact') }}" class="btn btn-primary btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

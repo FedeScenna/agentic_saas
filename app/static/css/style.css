@@ -3,7 +3,8 @@
 /* Global styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: #f8f9fa;
+    background-color: #0a192f;
 }
 
 /* Navbar customization */
@@ -12,15 +13,29 @@ body {
     letter-spacing: 0.5px;
 }
 
+.navbar {
+    background-color: #112240 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccd6f6;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #64ffda;
+}
+
 /* Card styling */
 .card {
     border-radius: 0.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #112240;
+    border: none;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Button styling */
@@ -31,33 +46,59 @@ body {
 }
 
 .btn-primary {
-    background-color: #4361ee;
-    border-color: #4361ee;
+    background-color: #64ffda;
+    border-color: #64ffda;
+    color: #0a192f;
 }
 
 .btn-primary:hover {
-    background-color: #3a56d4;
-    border-color: #3a56d4;
+    background-color: #4fd1b2;
+    border-color: #4fd1b2;
+    color: #0a192f;
+}
+
+.btn-outline-primary {
+    border-color: #64ffda;
+    color: #64ffda;
+}
+
+.btn-outline-primary:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+}
+
+.btn-outline-light {
+    border-color: #ccd6f6;
+    color: #ccd6f6;
+}
+
+.btn-outline-light:hover {
+    background-color: #ccd6f6;
+    color: #0a192f;
 }
 
 /* Feature icons */
 .feature-icon {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #64ffda !important;
+    color: #0a192f !important;
 }
 
 /* Step circles */
 .step-circle {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #64ffda !important;
+    color: #0a192f !important;
 }
 
 /* Dashboard stats */
 .stat-card {
-    border-left: 4px solid #4361ee;
-    background-color: #f8f9fa;
+    border-left: 4px solid #64ffda;
+    background-color: #112240;
 }
 
 .stat-icon {
-    color: #4361ee;
+    color: #64ffda;
     font-size: 2rem;
 }
 
@@ -71,13 +112,13 @@ body {
 }
 
 .status-active {
-    background-color: #10b981;
-    color: white;
+    background-color: #64ffda;
+    color: #0a192f;
 }
 
 .status-inactive {
-    background-color: #6c757d;
-    color: white;
+    background-color: #8892b0;
+    color: #0a192f;
 }
 
 .status-error {
@@ -95,7 +136,7 @@ body {
 }
 
 .report-status-completed {
-    color: #10b981;
+    color: #64ffda;
 }
 
 .report-status-error {
@@ -104,30 +145,31 @@ body {
 
 /* Subscription plan cards */
 .plan-card {
-    border: 1px solid #e5e7eb;
+    border: 1px solid #233554;
     border-radius: 0.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #112240;
 }
 
 .plan-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .plan-card.recommended {
-    border: 2px solid #4361ee;
+    border: 2px solid #64ffda;
 }
 
 .plan-header {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e5e7eb;
+    background-color: #172a45;
+    border-bottom: 1px solid #233554;
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .plan-price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #4361ee;
+    color: #64ffda;
 }
 
 .plan-features {
@@ -137,7 +179,8 @@ body {
 
 .plan-features li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #233554;
+    color: #ccd6f6;
 }
 
 .plan-features li:last-child {
@@ -145,6 +188,149 @@ body {
 }
 
 .plan-features i {
-    color: #10b981;
+    color: #64ffda;
     margin-right: 0.5rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: #112240 !important;
+}
+
+/* Table styling */
+.table {
+    color: #ccd6f6;
+}
+
+.table-light {
+    background-color: #172a45;
+    color: #ccd6f6;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #172a45;
+}
+
+/* Form controls */
+.form-control {
+    background-color: #172a45;
+    border-color: #233554;
+    color: #ccd6f6;
+}
+
+.form-control:focus {
+    background-color: #172a45;
+    border-color: #64ffda;
+    color: #ccd6f6;
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.25);
+}
+
+.form-label {
+    color: #ccd6f6;
+}
+
+.form-check-input {
+    background-color: #172a45;
+    border-color: #233554;
+}
+
+.form-check-input:checked {
+    background-color: #64ffda;
+    border-color: #64ffda;
+}
+
+/* Alert styling */
+.alert-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.alert-danger {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.alert-success {
+    background-color: rgba(100, 255, 218, 0.1);
+    border-color: rgba(100, 255, 218, 0.2);
+    color: #64ffda;
+}
+
+/* Section backgrounds */
+.bg-primary {
+    background-color: #112240 !important;
+}
+
+.bg-light {
+    background-color: #172a45 !important;
+    color: #ccd6f6;
+}
+
+.bg-dark {
+    background-color: #0a192f !important;
+}
+
+/* Text colors */
+.text-muted {
+    color: #8892b0 !important;
+}
+
+.text-white {
+    color: #ccd6f6 !important;
+}
+
+.text-primary {
+    color: #64ffda !important;
+}
+
+/* Links */
+a {
+    color: #64ffda;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4fd1b2;
+    text-decoration: underline;
+}
+
+/* Card headers */
+.card-header {
+    background-color: #172a45 !important;
+    border-bottom: 1px solid #233554;
+}
+
+/* List groups */
+.list-group-item {
+    background-color: #112240;
+    border-color: #233554;
+    color: #ccd6f6;
+}
+
+/* Badges */
+.badge {
+    font-weight: 600;
+}
+
+.bg-success {
+    background-color: #64ffda !important;
+    color: #0a192f !important;
+}
+
+.bg-secondary {
+    background-color: #8892b0 !important;
+}
+
+.bg-info {
+    background-color: #3b82f6 !important;
+}
+
+.bg-warning {
+    background-color: #f59e0b !important;
+}
+
+.bg-danger {
+    background-color: #ef4444 !important;
 } 

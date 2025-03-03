@@ -14,54 +14,51 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('main.index') }}">
+            <a class="navbar-brand" href="{{ url_for('main_bp.index') }}">
                 <i class="fas fa-chart-line me-2"></i>Business Insights
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('main.index') }}">Home</a>
+                        <a class="nav-link {% if request.endpoint == 'main_bp.index' %}active{% endif %}" href="{{ url_for('main_bp.index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('main.features') }}">Features</a>
+                        <a class="nav-link {% if request.endpoint == 'main_bp.features' %}active{% endif %}" href="{{ url_for('main_bp.features') }}">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('main.pricing') }}">Pricing</a>
+                        <a class="nav-link {% if request.endpoint == 'main_bp.pricing' %}active{% endif %}" href="{{ url_for('main_bp.pricing') }}">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('main.about') }}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('main.contact') }}">Contact</a>
+                        <a class="nav-link {% if request.endpoint == 'main_bp.contact' %}active{% endif %}" href="{{ url_for('main_bp.contact') }}">Contact</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     {% if current_user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('dashboard.index') }}">Dashboard</a>
+                        <a class="nav-link {% if request.endpoint.startswith('dashboard') %}active{% endif %}" href="{{ url_for('dashboard_bp.index') }}">Dashboard</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-user-circle me-1"></i>{{ current_user.username }}
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{ url_for('auth.profile') }}">Profile</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('subscription.index') }}">Subscription</a></li>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('auth_bp.profile') }}"><i class="fas fa-user me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('subscription_bp.manage') }}"><i class="fas fa-credit-card me-2"></i>Subscription</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ url_for('auth.logout') }}">Logout</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('auth_bp.logout') }}"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
                         </ul>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
+                        <a class="nav-link {% if request.endpoint == 'auth_bp.login' %}active{% endif %}" href="{{ url_for('auth_bp.login') }}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="{{ url_for('auth.register') }}">Sign Up</a>
+                        <a class="nav-link {% if request.endpoint == 'auth_bp.register' %}active{% endif %} btn btn-primary btn-sm text-white px-3 ms-2" href="{{ url_for('auth_bp.register') }}">Sign Up</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -99,17 +96,17 @@
                 <div class="col-md-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('main.features') }}" class="text-white">Features</a></li>
-                        <li><a href="{{ url_for('main.pricing') }}" class="text-white">Pricing</a></li>
-                        <li><a href="{{ url_for('main.faq') }}" class="text-white">FAQ</a></li>
-                        <li><a href="{{ url_for('main.contact') }}" class="text-white">Contact</a></li>
+                        <li><a href="{{ url_for('main_bp.features') }}" class="text-white">Features</a></li>
+                        <li><a href="{{ url_for('main_bp.pricing') }}" class="text-white">Pricing</a></li>
+                        <li><a href="{{ url_for('main_bp.faq') }}" class="text-white">FAQ</a></li>
+                        <li><a href="{{ url_for('main_bp.contact') }}" class="text-white">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Legal</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('main.terms') }}" class="text-white">Terms of Service</a></li>
-                        <li><a href="{{ url_for('main.privacy') }}" class="text-white">Privacy Policy</a></li>
+                        <li><a href="{{ url_for('main_bp.terms') }}" class="text-white">Terms of Service</a></li>
+                        <li><a href="{{ url_for('main_bp.privacy') }}" class="text-white">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
