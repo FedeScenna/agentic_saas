@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}Chat - DataChat{% endblock %}
+
+{% block content %}
+<section class="min-h-screen py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-6">
+            <h1 class="text-3xl font-bold mb-2">Chat with Your Data</h1>
+            <p class="text-gray-300">Ask questions about your data and get intelligent answers</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-4 gap-6">
+            <!-- Chat Interface -->
+            <div class="lg:col-span-3">
+                <div class="glass-effect rounded-xl h-[600px] flex flex-col">
+                    <!-- Chat Header -->
+                    <div class="p-4 border-b border-gray-700">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-robot text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">DataChat Assistant</h3>
+                                    <p class="text-gray-400 text-sm">Ready to help with your data</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span class="text-sm text-gray-400">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chat Messages -->
+                    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-robot text-sm text-white"></i>
+                            </div>
+                            <div class="bg-gray-800 p-3 rounded-lg max-w-2xl">
+                                <p>Hello! I'm your DataChat assistant. I can help you analyze and understand your data. What would you like to know?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chat Input -->
+                    <div class="p-4 border-t border-gray-700">
+                        <form id="chat-form" class="flex space-x-3">
+                            <input type="text" id="message-input" placeholder="Ask a question about your data..." 
+                                   class="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                                   required>
+                            <button type="submit" class="btn-primary px-6 py-3 rounded-lg text-white">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div>
+                <!-- Data Sources -->
+                <div class="glass-effect p-6 rounded-xl mb-6">
+                    <h2 class="text-xl font-bold mb-4">Active Data Sources</h2>
+                    <div class="space-y-3">
+                        <div class="bg-gray-800 p-3 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-file-pdf text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-sm">Company Reports</h3>
+                                    <p class="text-gray-400 text-xs">12 files</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 p-3 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-database text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-sm">Sales Database</h3>
+                                    <p class="text-gray-400 text-xs">1,247 records</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Questions -->
+                <div class="glass-effect p-6 rounded-xl">
+                    <h2 class="text-xl font-bold mb-4">Quick Questions</h2>
+                    <div class="space-y-2">
+                        <button class="quick-question w-full text-left p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                            What are the top performing products?
+                        </button>
+                        <button class="quick-question w-full text-left p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                            Show me sales trends
+                        </button>
+                        <button class="quick-question w-full text-left p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                            Compare this quarter vs last
+                        </button>
+                        <button class="quick-question w-full text-left p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                            What are the key insights?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chatForm = document.getElementById('chat-form');
+    const messageInput = document.getElementById('message-input');
+    const chatMessages = document.getElementById('chat-messages');
+    
+    // Handle form submission
+    chatForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const message = messageInput.value.trim();
+        if (message) {
+            addMessage(message, 'user');
+            messageInput.value = '';
+            
+            // Simulate AI response
+            setTimeout(() => {
+                addMessage("I received your message: '" + message + "'. This is where your AI chat with your data would happen!", 'assistant');
+            }, 1000);
+        }
+    });
+    
+    // Handle quick questions
+    document.querySelectorAll('.quick-question').forEach(button => {
+        button.addEventListener('click', function() {
+            const question = this.textContent.trim();
+            messageInput.value = question;
+            chatForm.dispatchEvent(new Event('submit'));
+        });
+    });
+    
+    function addMessage(message, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'flex items-start space-x-3';
+        
+        if (sender === 'user') {
+            messageDiv.innerHTML = `
+                <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-user text-sm text-white"></i>
+                </div>
+                <div class="bg-blue-600 p-3 rounded-lg max-w-2xl ml-auto">
+                    <p>${message}</p>
+                </div>
+            `;
+        } else {
+            messageDiv.innerHTML = `
+                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-robot text-sm text-white"></i>
+                </div>
+                <div class="bg-gray-800 p-3 rounded-lg max-w-2xl">
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+        
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+});
+</script>
+{% endblock %}
