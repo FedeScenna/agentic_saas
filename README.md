@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DataChat - Chat with Your Data
 
 A Flask-based web application that allows users to chat with their own unstructured and structured data using AI. Built with a modern dark mode interface and Supabase authentication.
