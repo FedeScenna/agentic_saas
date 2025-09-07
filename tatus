@@ -1,0 +1,8 @@
+[33ma0bdb88[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31mmain/main[m[33m)[m Merge branch 'main' of https://github.com/FedeScenna/agentic_saas
+[33m4eace7c[m add gitignore
+[33m86e1db7[m Adding gitignore
+[33m98640c9[m Delete .env
+[33mc961385[m Fix navigation issues: make logo clickable and fix Features/Pricing links
+[33me72e2b2[m Resolve merge conflict in README.md
+[33md1976af[m initial checkpoint
+[33m9c7c17d[m Initial commit
