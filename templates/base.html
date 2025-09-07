@@ -38,12 +38,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <h1 class="text-2xl font-bold gradient-text">DataChat</h1>
+                    <a href="{{ url_for('index') }}" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">DataChat</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="{{ url_for('index') }}" class="hover:text-blue-400 transition-colors">Home</a>
-                    <a href="#features" class="hover:text-blue-400 transition-colors">Features</a>
-                    <a href="#pricing" class="hover:text-blue-400 transition-colors">Pricing</a>
+                    <a href="{{ url_for('index') }}#features" class="hover:text-blue-400 transition-colors">Features</a>
+                    <a href="{{ url_for('index') }}#pricing" class="hover:text-blue-400 transition-colors">Pricing</a>
                     {% if session.user %}
                         <a href="{{ url_for('dashboard') }}" class="hover:text-blue-400 transition-colors">Dashboard</a>
                         <a href="{{ url_for('logout') }}" class="btn-primary px-4 py-2 rounded-lg text-white">Logout</a>
